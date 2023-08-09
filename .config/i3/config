@@ -99,11 +99,9 @@ for_window [class="firefox"] move window to scratchpad, scratchpad show
 bindsym $mod+Return [instance="term_scratch"] scratchpad show
 for_window [class="term_scratch"] floating enable
 for_window [class="term_scratch"] move window to scratchpad, scratchpad show
-exec --no-startup-id $terminal --class term_scratch
 
 # Telegram
 bindsym $mod+t [class="TelegramDesktop"] scratchpad show
-# exec --no-startup-id telegram-desktop
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="TelegramDesktop"] move window to scratchpad, scratchpad show
 
@@ -111,7 +109,6 @@ for_window [class="TelegramDesktop"] move window to scratchpad, scratchpad show
 # Rules
 for_window [class="Google-chrome"] move container to workspace 1
 for_window [class="Code"] move container to workspace 2
-# for_window [class="Monitask"] move container to workspace 3
 for_window [class="Obsidian"] move container to workspace 4
 for_window [class="*.exe"] move container to workspace 4
 for_window [class="Lutris"] move container to workspace 5
@@ -123,14 +120,15 @@ for_window [class="Skype"] move container to workspace 6
 for_window [class="Ark"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Galculator"] floating enable
-for_window [class="discord"] floating enable
 for_window [class="kitty"] floating enable
 for_window [class="Monitask"] floating enable
 for_window [class="Mumble"] floating enable
 for_window [class="Skype"] floating enable
 for_window [class="Steam"] floating enable
 for_window [class="Slack"] floating enable
+for_window [class="Spotify"] floating enable
 for_window [class="zoom"] floating enable
+for_window [class="feh"] floating enable
 
 
 # resize window (you can also use the mouse for that)
@@ -157,4 +155,6 @@ mode "resize" {
 #         status_command SCRIPT_DIR=/usr/lib/i3blocks/ i3blocks
 # }
 
-exec --no-startup-id betterlockscreen -l
+exec --no-startup-id alacritty --class term_scratchs
+exec --no-startup-id telegram-desktop
+# exec --no-startup-id betterlockscreen -l

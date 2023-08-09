@@ -1,25 +1,31 @@
 #!/bin/sh
 
 export XDG_SESSION_TYPE=x11
+export GDK_BACKEND=x11
 
 # keybind
 sxhkd &
 
 # application
-lxsession &
+lxqt-session &
 dunst & # notification manager
-parcellite & # clipboard manager
+copyq & # clipboard manager
 picom &
-conky &
+# conky &
 # volumeicon &
-nm-applet &
+# nm-applet &
 
 google-chrome-stable &
 code &
 #betterlockscreen -l &
 
 #bg
-feh --bg-fill --randomize ~/Pictures/wallpapers/backgroud/*
+~/.config/scripts/wallpapers.sh &
 
 #~/.config/scripts/bspwm/autostart.sh
 exec i3
+#exec dwm
+#exec gnome-session
+#exec startlxqt
+#export DESKTOP_SESSION=plasma
+#exec starplasma-x11
