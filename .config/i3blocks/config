@@ -1,0 +1,100 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[cpu_usage]
+command=$SCRIPT_DIR/cpu_usage
+interval=10
+LABEL=󰓅 
+
+[memory]
+command=$SCRIPT_DIR/memory
+label= 
+interval=30
+
+[wifi]
+command=$SCRIPT_DIR/wifi
+label=wifi:
+#INTERFACE=wlan0
+interval=60
+
+[bandwidth]
+command=$SCRIPT_DIR/bandwidth2 
+interval=persist
+markup=pango
+LABEL=
+
+[volume-pipewire]
+command=$SCRIPT_DIR/volume-pipewire
+interval=once
+signal=1
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+##exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+#LONG_FORMAT="${SYMB} ${VOL}% [${INDEX}:${NAME}]"
+#SHORT_FORMAT="${SYMB} ${VOL}% [${INDEX}]"
+#AUDIO_HIGH_SYMBOL='  '
+#AUDIO_MED_THRESH=50
+#AUDIO_MED_SYMBOL='  '
+#AUDIO_LOW_THRESH=0
+#AUDIO_LOW_SYMBOL='  '
+#AUDIO_DELTA=5
+#DEFAULT_COLOR="#ffffff"
+#MUTED_COLOR="#a0a0a0"
+#USE_ALSA_NAME=0
+#USE_DESCRIPTION=0
+## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
+#SUBSCRIBE=0
+
+[arch-update]
+command=$SCRIPT_DIR/arch-update 
+interval=3600
+markup=pango
+LABEL=🗘  
+
+[battery2]
+command=$SCRIPT_DIR/battery2
+markup=pango
+interval=30
+
+[kbdd_layout]
+command=$SCRIPT_DIR/kbdd_layout
+interval=persist
+
+[uptime]
+label=Uptime: 
+command=uptime | awk '{print $3 " " $4}' | sed 's/,.*//'
+interval=30
+
+
+[time]
+label= 
+command=date '+%H:%M %d.%m'
+interval=1
+
+[shutdown_menu]
+full_text= 
+# If you are using FontAwesome, we recommend the power-off icon:
+# http://fontawesome.io/icon/power-off/
+command=$SCRIPT_DIR/shutdown_menu
+#FG_COLOR=#bbbbbb
+#BG_COLOR=#111111
+#HLFG_COLOR=#111111
+#HLBG_COLOR=#bbbbbb
+#BORDER_COLOR=#222222
+#ROFI_TEXT=Menu:
+#ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
+#ZENITY_TITLE=Menu
+#ZENITY_TEXT=Action:
+#ZENITY_OPTIONS=--column= --hide-header
+#ENABLE_CONFIRMATIONS=true (must be true or false)
+#LAUNCHER=rofi (must be rofi or zenity)
+#LOCKSCRIPT=i3lock --color=${BG_COLOR#"#"}

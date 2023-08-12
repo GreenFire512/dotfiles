@@ -1,0 +1,50 @@
+##################
+# Default keys
+##################
+
+# reload sxhkd:
+super + Escape
+    pkill -USR1 -x sxhkd && notify-send "sxhkd: sxhkd has been restarted."
+
+# Print screen
+Print
+    screengrab -f
+
+# Print screen area
+super + shift + @s
+    screengrab -
+
+# Menu
+super + r
+    rofi -show drun
+
+# Lockscreen
+super + l
+   betterlockscreen -l
+
+
+
+##################
+# App keys
+##################
+
+super + shift + Return
+    alacritty
+
+
+
+##################
+# Media keys
+##################
+
+# Brightness control
+XF86MonBrightness{Up,Down}
+    ~/.config/scripts/notification.sh {brightness_up,brightness_down}
+
+# Volume control
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    ~/.config/scripts/notification.sh {volume_up,volume_down,volume_mute}
+
+# Playing control
+XF86Audio{Play,Next,Prev,Stop}
+    playerctl {play-pause,next,previous,stop}

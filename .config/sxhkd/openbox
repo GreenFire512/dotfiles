@@ -1,0 +1,4 @@
+super + q
+   wmctrl -x Navigator.firefox -R Navigator.firefoxs -r Navigator.firefox -b toggle,hidden
+super + shift + Enter
+    wmctrl -x popup_console.popup_console -r popup_console.popup_console -b toggle,hidden

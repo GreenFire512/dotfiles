@@ -1,0 +1,28 @@
+# nord theme
+
+[global]
+    font = "Roboto Mono, Font Awesome 5 Free Regular"
+    origin = bottom-center
+    frame_color = "#5E81AC"
+    frame_width = 2
+    separator_color = frame
+    separator_width = 1
+    sort = yes
+
+[urgency_low]
+    msg_urgency = low
+    background = "#2E3440"
+	foreground = "#D8DEE9"
+	timeout = 4
+
+[urgency_normal]
+	msg_urgency = normal
+	background = "#3B4252"
+	foreground = "#E5E9F0"
+	timeout = 4
+
+[urgency_critical]
+	msg_urgency = critical
+	background = "#2E3440"
+	foreground = "#D08770"
+	timeout = 0

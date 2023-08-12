@@ -1,0 +1,24 @@
+# screen
+super + {1-6}
+    qtile cmd-obj -o group {1-6} -f toscreen
+# screen
+super + shift + {1-6}
+    qtile cmd-obj -o window -f toscreen({1-6})
+#Focus selected desktop
+super + {_,shift + }Tab
+   qtile cmd-obj -o group -f {next_window,prev_window}
+#kill
+super + w
+   qtile cmd-obj -o window -f kill
+#menu
+super + r
+   qtile cmd-obj -o cmd -f spawncmd
+# Qtile reload|exit
+super + ctrl + {r,q}
+   qtile cmd-obj -o cmd -f {restart,shutdown}
+# TOGGLE FLOATING LAYOUT
+super + shift + f
+   qtile cmd-obj -o window -f toggle_floating
+# FLIP LAYOUT FOR MONADTALL/MONADWIDE
+super + shift + space
+   qtile cmd-obj -o layout -f flip

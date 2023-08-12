@@ -1,0 +1,36 @@
+##################
+# Apps
+##################
+super + Return
+    alacritty
+
+super + q
+	~/.config/scripts/bspwm/xpad.sh Navigator.firefox
+
+
+
+##################
+# bspwm
+##################
+
+# quit/restart bspwm
+super + ctrl + {q,r}
+    bspc {quit, wm -r}
+
+# close and kill
+# super + {_,shift + }w
+# 	bspc node -{c,k}
+super + shift + w
+	bspc node -c
+
+# focus or send to the given desktop
+super + {_,shift + }{1-6}
+	bspc {desktop -f,node -d} {1-6}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }Tab
+	bspc node -f {next,prev}.local.!hidden.window
+
+# Toogle floating window:
+super + {f,g,t}
+	bspc node -t {~floating,fullscreen,tiled}
