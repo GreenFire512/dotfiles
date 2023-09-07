@@ -156,5 +156,6 @@ mode "resize" {
 # }
 
 exec --no-startup-id alacritty --class term_scratchs
-exec --no-startup-id telegram-desktop
+# exec --no-startup-id telegram-desktop
+# exec --no-startup-id firefox
 # exec --no-startup-id betterlockscreen -l

@@ -15,7 +15,7 @@ picom &
 # volumeicon &
 # nm-applet &
 
-google-chrome-stable &
+brave &
 code &
 #betterlockscreen -l &
 

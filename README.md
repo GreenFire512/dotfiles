@@ -1,5 +1,9 @@
 # My dotfiles
-- dwm
-- i3
-- polybar
-- scripts
+- home
+- config
+- etc
+
+# Installing
+```
+python link.py
+```

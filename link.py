@@ -53,7 +53,7 @@ FILES = [
 UNLINK = len(sys.argv) > 1 and sys.argv[1]
 
 
-def link_or_unlink(source, destination, count, is_print=True):
+def link_or_unlink(source, destination, count=0, is_print=True):
     """ link or unlink files """
     destination = os.path.expanduser(destination)
     cmd_line = []
@@ -61,8 +61,11 @@ def link_or_unlink(source, destination, count, is_print=True):
     files = ['']
     if os.path.isdir(source):
         files = os.listdir(source)
+        destination_dir = destination
+    else:
+        destination_dir = os.path.dirname(destination)
 
-    if not os.path.isdir(destination):
+    if not os.path.isdir(destination_dir):
         print('create dir:', destination)
         os.makedirs(destination)
 
@@ -93,13 +96,13 @@ def link_or_unlink(source, destination, count, is_print=True):
 for file_str in CONFIG_APPS:
     SOURCE_PATH = CONFIG_DIR_LOCAL + file_str
     DEST_PATH = CONFIG_DIR + file_str
-    link_or_unlink(SOURCE_PATH, DEST_PATH, 0)
+    link_or_unlink(SOURCE_PATH, DEST_PATH)
 
 # home dir
-# for file_str in HOME_FILES:
-#     SOURCE_PATH = HOME_DIR_LOCAL + file_str
-#     DEST_PATH = HOME_DIR + file_str
-#     link_or_unlink(SOURCE_PATH, DEST_PATH)
+for file_str in HOME_FILES:
+    SOURCE_PATH = HOME_DIR_LOCAL + file_str
+    DEST_PATH = HOME_DIR + file_str
+    link_or_unlink(SOURCE_PATH, DEST_PATH)
 
 # etc dir
 # for file_name in HOME_FILES:
