@@ -17,6 +17,8 @@ super + shift + @s
 # Menu
 super + r
     rofi -show drun
+super + shift + p
+    rofi -show p -modi p:'rofi-power-menu --symbols-font "Symbols Nerd Font Mono"'
 
 # Lockscreen
 super + l
@@ -39,11 +41,11 @@ super + shift + Return
 
 # Brightness control
 XF86MonBrightness{Up,Down}
-    ~/.config/scripts/notification.sh {brightness_up,brightness_down}
+    ~/scripts/notification.sh {brightness_up,brightness_down}
 
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-    ~/.config/scripts/notification.sh {volume_up,volume_down,volume_mute}
+    ~/scripts/notification.sh {volume_up,volume_down,volume_mute}
 
 # Playing control
 XF86Audio{Play,Next,Prev,Stop}

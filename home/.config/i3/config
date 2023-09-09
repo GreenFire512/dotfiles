@@ -108,6 +108,7 @@ for_window [class="TelegramDesktop"] move window to scratchpad, scratchpad show
 
 # Rules
 for_window [class="Google-chrome"] move container to workspace 1
+for_window [class="Brave"] move container to workspace 1
 for_window [class="Code"] move container to workspace 2
 for_window [class="Obsidian"] move container to workspace 4
 for_window [class="*.exe"] move container to workspace 4

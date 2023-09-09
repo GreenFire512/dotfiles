@@ -20,11 +20,11 @@ code &
 #betterlockscreen -l &
 
 #bg
-~/.config/scripts/wallpapers.sh &
+~/scripts/wallpapers.sh &
 
 #~/.config/scripts/bspwm/autostart.sh
-exec i3
-#exec dwm
+# exec i3
+exec dwm 2> ~/.dwm.log
 #exec gnome-session
 #exec startlxqt
 #export DESKTOP_SESSION=plasma

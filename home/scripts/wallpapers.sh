@@ -11,6 +11,6 @@ done
 
 while true
 do
-    feh --bg-fill --randomize ~/Pictures/wallpapers/backgroud/*
+    feh --bg-fill --randomize ~/Pictures/wallpapers/*
     sleep 1800
 done
