@@ -11,6 +11,7 @@ lxqt-session &
 dunst & # notification manager
 copyq & # clipboard manager
 picom &
+dwmblocks &
 # conky &
 # volumeicon &
 # nm-applet &

@@ -1,5 +1,8 @@
 #!/bin/sh
 
-uptime=$(uptime | awk '{print $3 " " $4}' | sed 's/,.*//')
+NOW=`date +%s -d $(date '+%H:%M:%S')`
+START=`date +%s -d $(uptime -s | awk '{print $2}')`
+DIFFSEC=`expr ${NOW} - ${START}`
+UPTIME=$(date +%H:%M -ud @${DIFFSEC})
 
-echo "$uptime"
+printf "󰜸 %s" $UPTIME
