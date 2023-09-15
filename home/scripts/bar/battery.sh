@@ -32,7 +32,7 @@ battery () {
     STATUS=$(cat /sys/class/power_supply/$BATTERY/status)
     STAGE=$(($CHARGE / 10))
     if [ "$STATUS" = "Charging" ]; then
-        eval ICON='CHARGE_ICON'$STAGE
+        eval ICON='$CHARGE_ICON'$STAGE
     else
         eval ICON='$BAT_ICON'$STAGE
     fi
@@ -41,7 +41,7 @@ battery () {
     else
         TEXT="$CHARGE%"
     fi
-    printf "%s %s" $ICON $TEXT
+    printf "\x01%s %s" $ICON $TEXT
 }
 
 battery

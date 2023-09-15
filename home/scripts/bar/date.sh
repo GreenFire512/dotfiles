@@ -18,5 +18,22 @@ case $BLOCK_BUTTON in
             --width=$YAD_WIDTH --height=$YAD_HEIGHT --posx=$pos_x --posy=$pos_y
 esac
 
-# . sb-theme
-printf "  $(date '+%I:%M%p')"
+clock=$(date '+%I')
+
+case "$clock" in
+	"00") icon="🕛" ;;
+	"01") icon="🕐" ;;
+	"02") icon="🕑" ;;
+	"03") icon="🕒" ;;
+	"04") icon="🕓" ;;
+	"05") icon="󱑏" ;;
+	"06") icon="🕕" ;;
+	"07") icon="🕖" ;;
+	"08") icon="🕗" ;;
+	"09") icon="🕘" ;;
+	"10") icon="🕙" ;;
+	"11") icon="🕚" ;;
+	"12") icon="🕛" ;;
+esac
+
+printf "\x01%s  $(date '+%I:%M%p')" $icon

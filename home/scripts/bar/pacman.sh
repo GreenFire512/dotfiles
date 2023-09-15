@@ -25,4 +25,4 @@ else
     TEXT=󰡕
 fi
 
-printf "󰮯  %s" $TEXT
+printf "\x01󰏖  %s" $TEXT

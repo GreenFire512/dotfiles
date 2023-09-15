@@ -6,4 +6,4 @@ case $BLOCK_BUTTON in
     1) alacritty -s htop;;
 esac
 
-printf "󰌢  %2.1fG" $(($MEM/1000))
+printf "\x01󰌢  %2.1fG" $(($MEM/1000))

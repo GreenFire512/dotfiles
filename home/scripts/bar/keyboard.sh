@@ -12,4 +12,4 @@ else
     LANG=en
 fi
 
-printf "󰥻  %s" $LANG
+printf "\x01󰥻  %s" $LANG

@@ -11,7 +11,7 @@ dwm_weather() {
     LOCATION="Podgorica"
 
     DATA=$(curl -s wttr.in/$LOCATION?format=1)
-    echo "${SEP1} ${DATA} ${SEP2}" 
+    echo -e "\x01${SEP1} ${DATA} ${SEP2}" 
 }
 
 dwm_weather
